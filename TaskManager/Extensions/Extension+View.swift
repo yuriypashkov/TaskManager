@@ -16,4 +16,8 @@ extension View {
     func vSpacing(_ alignment: Alignment) -> some View {
         self.frame(maxHeight: .infinity, alignment: alignment )
     }
+    
+    func isSameDate(_ firstDate: Date, _ secondDate: Date) -> Bool {
+        return Calendar.current.isDate(firstDate, inSameDayAs: secondDate)
+    }
 }
