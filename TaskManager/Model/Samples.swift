@@ -9,10 +9,10 @@ import Foundation
 
 class Samples {
     static var sampleTasks: [Task] = [
-        Task(taskTitle: "Record video", creationDate: .updateHour(-4), isCompleted: true, tint: .blue),
-        Task(taskTitle: "Redesign website", creationDate: .updateHour(-3), isCompleted: true, tint: .red),
-        Task(taskTitle: "Eat the lunch", tint: .green),
-        Task(taskTitle: "Go for a walk", creationDate: .updateHour(3), tint: .yellow),
-        Task(taskTitle: "Go to sleep", creationDate: .updateHour(1), tint: .orange)
+        Task(taskTitle: "Record video", creationDate: .updateHour(-4), isCompleted: true, tint: .taskColorOne),
+        Task(taskTitle: "Redesign website", creationDate: .updateHour(-3), isCompleted: true, tint: .taskColorTwo),
+        Task(taskTitle: "Eat the lunch", tint: .taskColorThree),
+        Task(taskTitle: "Go for a walk", creationDate: .updateHour(3), tint: .taskColorFour),
+        Task(taskTitle: "Go to sleep", creationDate: .updateHour(1), tint: .taskColorFive)
     ]
 }

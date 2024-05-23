@@ -18,4 +18,11 @@ extension Color {
     }
     
     static var darkBlue: Color = .init(hex: 0x1850c0)
+    static var taskColorOne: Color = .blue
+    static var taskColorTwo: Color = .red
+    static var taskColorThree: Color = .green
+    static var taskColorFour: Color = .yellow
+    static var taskColorFive: Color = .orange
+    
+    static var colors: [Color] = [.taskColorOne, .taskColorTwo, .taskColorThree, .taskColorFour, taskColorFive]
 }
