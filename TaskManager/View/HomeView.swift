@@ -13,7 +13,6 @@ struct HomeView: View {
     @State private var weekSlider: [[WeekDay]] = []
     @State private var currentWeekIndex: Int = 1
     @State private var createWeek: Bool = false
-    @State private var tasks: [Task] = Samples.sampleTasks.sorted(by: { $1.creationDate > $0.creationDate })
     @State private var createNewTask: Bool = false
     
     // animation week tab
@@ -24,7 +23,8 @@ struct HomeView: View {
             makeHeader()
             ScrollView(.vertical) {
                 VStack {
-                    makeTasksView()
+                    //makeTasksView()
+                    TasksView(currentDate: $currentDate)
                 }
                 .hSpacing(.center)
                 .vSpacing(.center)
@@ -177,25 +177,6 @@ struct HomeView: View {
                     })
             }
         }
-    }
-    
-    // MARK: - Make TasksView
-    private func makeTasksView() -> some View {
-        VStack(alignment: .leading, spacing: 36) {
-            ForEach($tasks) { $task in
-                TaskRowView(task: $task)
-                    .background(alignment: .leading) {
-                        if tasks.last?.id != task.id {
-                            Rectangle()
-                                .frame(width: 1)
-                                .offset(x: 8)
-                                .padding(.bottom, -36)
-                        }
-                    }
-            }
-        }
-        .padding([.leading, .vertical], 16)
-        .padding(.top, 16)
     }
     
     private func paginateWeek() {

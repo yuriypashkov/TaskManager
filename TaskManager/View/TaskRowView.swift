@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TaskRowView: View {
     
-    @Binding var task: Task
+    @Bindable var task: Task
+    
+    @Environment(\.modelContext) private var context
     
     private var indicatorColor: Color {
         if task.isCompleted {
@@ -48,8 +50,15 @@ struct TaskRowView: View {
             }
             .padding(16)
             .hSpacing(.leading)
-            .background(task.tint, in: .rect(topLeadingRadius: 16, bottomLeadingRadius: 16))
+            .background(task.tintColor, in: .rect(topLeadingRadius: 16, bottomLeadingRadius: 16))
             .strikethrough(task.isCompleted, pattern: .solid, color: .black.opacity(0.55))
+            .contentShape(.contextMenuPreview, .rect(cornerRadius: 16)) // changing contextMenu shape
+            .contextMenu {
+                Button("Delete task", role: .destructive) { // deleting task
+                    context.delete(task)
+                    try? context.save()
+                }
+            }
             .offset(y: -8)
         }
 

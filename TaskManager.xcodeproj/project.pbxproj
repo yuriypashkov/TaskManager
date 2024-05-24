@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210405472C009B7200CABC8E /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210405462C009B7200CABC8E /* TasksView.swift */; };
 		2165575E2BFCCA9100DC91C6 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2165575D2BFCCA9100DC91C6 /* OffsetKey.swift */; };
 		216557642BFCFDD900DC91C6 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216557632BFCFDD900DC91C6 /* TaskRowView.swift */; };
 		216557662BFD068B00DC91C6 /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216557652BFD068B00DC91C6 /* Extension+Color.swift */; };
@@ -16,7 +17,6 @@
 		21FE09FC2BFB783300D47104 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21FE09FB2BFB783300D47104 /* Assets.xcassets */; };
 		21FE09FF2BFB783300D47104 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21FE09FE2BFB783300D47104 /* Preview Assets.xcassets */; };
 		21FE0A072BFB786800D47104 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE0A062BFB786800D47104 /* Task.swift */; };
-		21FE0A092BFB78F100D47104 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE0A082BFB78F100D47104 /* Samples.swift */; };
 		21FE0A0D2BFB7A0800D47104 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE0A0C2BFB7A0800D47104 /* Extension+Date.swift */; };
 		21FE0A0F2BFB7E0700D47104 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE0A0E2BFB7E0700D47104 /* Extension+View.swift */; };
 		21FE0A112BFB7EB000D47104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FE0A102BFB7EB000D47104 /* HomeView.swift */; };
@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210405462C009B7200CABC8E /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		2165575D2BFCCA9100DC91C6 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
 		216557632BFCFDD900DC91C6 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		216557652BFD068B00DC91C6 /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		21FE09FB2BFB783300D47104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21FE09FE2BFB783300D47104 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21FE0A062BFB786800D47104 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		21FE0A082BFB78F100D47104 /* Samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
 		21FE0A0C2BFB7A0800D47104 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
 		21FE0A0E2BFB7E0700D47104 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		21FE0A102BFB7EB000D47104 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				21FE0A062BFB786800D47104 /* Task.swift */,
-				21FE0A082BFB78F100D47104 /* Samples.swift */,
 				21FE0A122BFB841200D47104 /* WeekDay.swift */,
 				2165575D2BFCCA9100DC91C6 /* OffsetKey.swift */,
 			);
@@ -117,6 +116,7 @@
 				21FE0A102BFB7EB000D47104 /* HomeView.swift */,
 				216557632BFCFDD900DC91C6 /* TaskRowView.swift */,
 				216557672BFF4AEE00DC91C6 /* NewTaskView.swift */,
+				210405462C009B7200CABC8E /* TasksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,11 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				216557642BFCFDD900DC91C6 /* TaskRowView.swift in Sources */,
+				210405472C009B7200CABC8E /* TasksView.swift in Sources */,
 				21FE09FA2BFB783200D47104 /* ContentView.swift in Sources */,
 				21FE0A112BFB7EB000D47104 /* HomeView.swift in Sources */,
 				21FE0A132BFB841200D47104 /* WeekDay.swift in Sources */,
 				216557662BFD068B00DC91C6 /* Extension+Color.swift in Sources */,
-				21FE0A092BFB78F100D47104 /* Samples.swift in Sources */,
 				21FE0A072BFB786800D47104 /* Task.swift in Sources */,
 				21FE09F82BFB783200D47104 /* TaskManagerApp.swift in Sources */,
 				216557682BFF4AEE00DC91C6 /* NewTaskView.swift in Sources */,

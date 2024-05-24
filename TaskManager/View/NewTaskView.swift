@@ -10,7 +10,9 @@ import SwiftUI
 struct NewTaskView: View {
     
     @Environment(\.dismiss) private var dismiss
-    @State private var taskColor: Color = .taskColorOne
+    @Environment(\.modelContext) private var context
+    
+    @State private var taskColor: String = "taskColorOne"
     @State private var taskTitle: String = ""
     @State private var taskDate: Date = Date()
     
@@ -58,7 +60,7 @@ struct NewTaskView: View {
                     HStack(spacing: 0) {
                         ForEach(Color.colors, id: \.self) { color in
                             Circle()
-                                .fill(color)
+                                .fill(Color.getColorFromString(color))
                                 .frame(width: 20, height: 20)
                                 .background(content: {
                                     Circle()
@@ -83,7 +85,15 @@ struct NewTaskView: View {
             Spacer()
             
             Button(action: {
-                
+                // saving task in model
+                let task = Task(taskTitle: taskTitle, creationDate: taskDate, tint: taskColor)
+                do {
+                    context.insert(task)
+                    try context.save()
+                    dismiss()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }, label: {
                 Text("Create task")
                     .font(.title3)
@@ -92,7 +102,7 @@ struct NewTaskView: View {
                     .foregroundStyle(.black)
                     .hSpacing(.center)
                     .padding(.vertical, 12)
-                    .background(taskColor, in: .rect(cornerRadius: 12))
+                    .background(Color.getColorFromString(taskColor), in: .rect(cornerRadius: 12))
             })
             .disabled(taskTitle == "")
             .opacity(taskTitle == "" ? 0.5 : 1)

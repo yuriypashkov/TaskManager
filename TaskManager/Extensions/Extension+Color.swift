@@ -17,6 +17,17 @@ extension Color {
         self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
     
+    static func getColorFromString(_ stringValue: String) -> Color {
+        switch stringValue {
+        case "taskColorOne": return .taskColorOne
+        case "taskColorTwo": return .taskColorTwo
+        case "taskColorThree": return .taskColorThree
+        case "taskColorFour": return .taskColorFour
+        case "taskColorFive": return .taskColorFive
+        default: return .black
+        }
+    }
+    
     static var darkBlue: Color = .init(hex: 0x1850c0)
     static var taskColorOne: Color = .blue
     static var taskColorTwo: Color = .red
@@ -24,5 +35,5 @@ extension Color {
     static var taskColorFour: Color = .yellow
     static var taskColorFive: Color = .orange
     
-    static var colors: [Color] = [.taskColorOne, .taskColorTwo, .taskColorThree, .taskColorFour, taskColorFive]
+    static var colors: [String] = ["taskColorOne", "taskColorTwo", "taskColorThree", "taskColorFour", "taskColorFive"]
 }
